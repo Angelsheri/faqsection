@@ -1,0 +1,260 @@
+
+    <style>
+        .book-container {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            align-items: center;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .book-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .book-header h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .book-header p {
+            color: #7f8c8d;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-book-container {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-book-box {
+            margin-bottom: 12px;
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            transition: all 0.3s ease;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .faq-book-box:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        .faq-book-box h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            color: #2c3e50;
+            padding-right: 60px;
+        }
+
+        .faq-book-box p {
+            font-size: 17px;
+            color: #555;
+            line-height: 1.7;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, margin-top 0.4s ease;
+        }
+
+        .faq-book-box.active p {
+            max-height: 500px;
+            margin-top: 20px;
+        }
+
+        .arrow-book-btn {
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            width: 52px;
+            height: 52px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-book-box.active .arrow-book-btn {
+            transform: rotate(180deg);
+        }
+
+        .book-highlight {
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .faq-book-box {
+                padding: 25px 20px;
+            }
+
+            .faq-book-box h3 {
+                font-size: 20px;
+                padding-right: 50px;
+            }
+
+            .faq-book-box p {
+                font-size: 16px;
+            }
+
+            .arrow-book-btn {
+                top: 25px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+
+            .book-header h1 {
+                font-size: 30px;
+            }
+
+            .book-header p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .faq-book-box h3 {
+                font-size: 18px;
+                padding-right: 40px;
+            }
+
+            .arrow-book-btn {
+                width: 40px;
+                height: 40px;
+            }
+
+            .book-header h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="faq-book-container">
+            <!-- Active/open FAQ -->
+            <div class="faq-book-box active">
+                <h3>How do I know if I need a new book?</h3>
+                <p>
+                    If your book is outdated, damaged, or no longer relevant to your interests, it may be time to explore new titles. We offer recommendations and reviews to help you find your next great read.
+                </p>
+                <div class="arrow-book-btn">
+                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25.7805" cy="25.7805" r="25.7805" transform="rotate(90 25.7805 25.7805)" fill="#93A31D" />
+                        <path d="M15.5088 26.0719L18.0709 23.4898L24.0856 29.5046L24.0856 15.9338L27.8486 15.9338L27.8486 29.5046L33.8534 23.4898L36.4255 26.0719L25.9671 36.5302L15.5088 26.0719Z" fill="white" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Collapsed FAQs -->
+            <div class="faq-book-box">
+                <h3>What’s included in a book review?</h3>
+                <p>
+                    Our book reviews cover plot summary, character analysis, writing style, and overall impressions. You'll receive insights and recommendations for similar books.
+                </p>
+                <div class="arrow-book-btn">
+                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25.7805" cy="25.7805" r="25.7805" transform="rotate(90 25.7805 25.7805)" fill="#93A31D" />
+                        <path d="M15.5088 26.0719L18.0709 23.4898L24.0856 29.5046L24.0856 15.9338L27.8486 15.9338L27.8486 29.5046L33.8534 23.4898L36.4255 26.0719L25.9671 36.5302L15.5088 26.0719Z" fill="white" />
+                    </svg>
+                </div>
+            </div>
+            <div class="faq-book-box">
+                <h3>Do you offer book recommendations for businesses?</h3>
+                <p>
+                    Yes, we provide curated book lists for offices, entrepreneurs, and professionals. Contact us for a custom reading list for your business needs.
+                </p>
+                <div class="arrow-book-btn">
+                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25.7805" cy="25.7805" r="25.7805" transform="rotate(90 25.7805 25.7805)" fill="#93A31D" />
+                        <path d="M15.5088 26.0719L18.0709 23.4898L24.0856 29.5046L24.0856 15.9338L27.8486 15.9338L27.8486 29.5046L33.8534 23.4898L36.4255 26.0719L25.9671 36.5302L15.5088 26.0719Z" fill="white" />
+                    </svg>
+                </div>
+            </div>
+            <div class="faq-book-box">
+                <h3>What genres do you recommend outside of fiction?</h3>
+                <p>
+                    We recommend non-fiction, biographies, self-help, business, and science books. Ask us for recommendations in your preferred genre.
+                </p>
+                <div class="arrow-book-btn">
+                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25.7805" cy="25.7805" r="25.7805" transform="rotate(90 25.7805 25.7805)" fill="#93A31D" />
+                        <path d="M15.5088 26.0719L18.0709 23.4898L24.0856 29.5046L24.0856 15.9338L27.8486 15.9338L27.8486 29.5046L33.8534 23.4898L36.4255 26.0719L25.9671 36.5302L15.5088 26.0719Z" fill="white" />
+                    </svg>
+                </div>
+            </div>
+            <div class="faq-book-box">
+                <h3>Can I get book financing or discounts?</h3>
+                <p>
+                    Yes, we offer special discounts and financing options for bulk book purchases. Ask us about our current offers and how to apply.
+                </p>
+                <div class="arrow-book-btn">
+                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25.7805" cy="25.7805" r="25.7805" transform="rotate(90 25.7805 25.7805)" fill="#93A31D" />
+                        <path d="M15.5088 26.0719L18.0709 23.4898L24.0856 29.5046L24.0856 15.9338L27.8486 15.9338L27.8486 29.5046L33.8534 23.4898L36.4255 26.0719L25.9671 36.5302L15.5088 26.0719Z" fill="white" />
+                    </svg>
+                </div>
+            </div>
+            <div class="faq-book-box">
+                <h3>Are your book recommendations reliable?</h3>
+                <p>
+                    Absolutely. Our team is passionate about books and provides honest, well-researched recommendations for all categories.
+                </p>
+                <div class="arrow-book-btn">
+                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25.7805" cy="25.7805" r="25.7805" transform="rotate(90 25.7805 25.7805)" fill="#93A31D" />
+                        <path d="M15.5088 26.0719L18.0709 23.4898L24.0856 29.5046L24.0856 15.9338L27.8486 15.9338L27.8486 29.5046L33.8534 23.4898L36.4255 26.0719L25.9671 36.5302L15.5088 26.0719Z" fill="white" />
+                    </svg>
+                </div>
+            </div>
+            <div class="faq-book-box">
+                <h3>What makes your book service different?</h3>
+                <p>
+                    We pride ourselves on personalized recommendations, quality reviews, and a passion for reading. Our team is local, friendly, and committed to your satisfaction.
+                </p>
+                <div class="arrow-book-btn">
+                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25.7805" cy="25.7805" r="25.7805" transform="rotate(90 25.7805 25.7805)" fill="#93A31D" />
+                        <path d="M15.5088 26.0719L18.0709 23.4898L24.0856 29.5046L24.0856 15.9338L27.8486 15.9338L27.8486 29.5046L33.8534 23.4898L36.4255 26.0719L25.9671 36.5302L15.5088 26.0719Z" fill="white" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqBookBoxes = document.querySelectorAll('.faq-book-box');
+
+            faqBookBoxes.forEach(box => {
+                const arrowBtn = box.querySelector('.arrow-book-btn');
+
+                arrowBtn.addEventListener('click', () => {
+                    const isActive = box.classList.contains('active');
+
+                    // Close all boxes
+                    faqBookBoxes.forEach(b => {
+                        b.classList.remove('active');
+                    });
+
+                    // Open clicked box if it wasn't active
+                    if (!isActive) {
+                        box.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+        
+ 
